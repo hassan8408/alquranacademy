@@ -96,6 +96,7 @@ body {
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .navbar-links {
@@ -696,6 +697,11 @@ h2.section-title::after {
 @media (max-width: 768px) {
     .navbar {
         padding: 0 5%;
+    }
+    
+    .navbar-brand {
+        font-size: 1.3rem;
+        letter-spacing: 0.5px;
     }
     
     .mobile-menu-btn {
