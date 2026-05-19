@@ -47,6 +47,10 @@
   --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Dropdown color defaults for theme context */
+  --dropdown-bg: #0E2A3A;
+  --dropdown-text: #FFFFFF;
 }
 
 [data-theme="light"] {
@@ -63,6 +67,10 @@
   --shadow-sm: 0 2px 8px rgba(10, 26, 42, 0.06);
   --shadow-md: 0 8px 24px rgba(10, 26, 42, 0.08);
   --shadow-lg: 0 20px 48px rgba(10, 26, 42, 0.12);
+  
+  /* Update dropdown for light mode */
+  --dropdown-bg: #FFFFFF;
+  --dropdown-text: #0A1A2A;
 }
 
 * {
@@ -1110,6 +1118,21 @@ section {
   box-shadow: 0 0 0 3px rgba(232, 184, 73, 0.1);
 }
 
+/* Explicit Fix for select dropdown readability */
+.form-group select {
+  cursor: pointer;
+  background-color: var(--primary-light);
+}
+
+.form-group select option {
+  background-color: var(--dropdown-bg) !important;
+  color: var(--dropdown-text) !important;
+}
+
+.form-group select option:disabled {
+  color: var(--text-muted) !important;
+}
+
 .form-group textarea {
   resize: vertical;
   min-height: 120px;
@@ -1778,7 +1801,7 @@ a:focus-visible {
         <div class="tutor-avatar">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&q=80" alt="Ustadh Ahmed Hassan, experienced Quran tutor">
         </div>
-        <h3>Ustadh Ahmed Hassan</h3>
+        <h3>Hafiz Hassan</h3>
         <div class="tutor-rating" aria-label="5 star rating">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -1788,16 +1811,16 @@ a:focus-visible {
           <span>5.0</span>
         </div>
         <div class="tutor-meta">
-          <span><i class="fas fa-briefcase"></i> 12+ Years</span>
+          <span><i class="fas fa-briefcase"></i> 10+ Years</span>
           <span><i class="fas fa-users"></i> 500+ Students</span>
         </div>
         <div class="tutor-languages">
-          <span class="lang-tag">Arabic</span>
+          <!-- <span class="lang-tag">Arabic</span> -->
           <span class="lang-tag">English</span>
           <span class="lang-tag">Urdu</span>
         </div>
       </div>
-      
+<!--       
       <div class="tutor-card observe stagger-2">
         <div class="tutor-avatar">
           <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&q=80" alt="Ustadha Fatima Ali, certified female Quran teacher">
@@ -1819,7 +1842,7 @@ a:focus-visible {
           <span class="lang-tag">Arabic</span>
           <span class="lang-tag">English</span>
         </div>
-      </div>
+      </div> -->
       
       <div class="tutor-card observe stagger-3">
         <div class="tutor-avatar">
@@ -1835,17 +1858,17 @@ a:focus-visible {
           <span>5.0</span>
         </div>
         <div class="tutor-meta">
-          <span><i class="fas fa-briefcase"></i> 15+ Years</span>
-          <span><i class="fas fa-users"></i> 600+ Students</span>
+          <span><i class="fas fa-briefcase"></i> 5+ Years</span>
+          <span><i class="fas fa-users"></i> 200+ Students</span>
         </div>
         <div class="tutor-languages">
-          <span class="lang-tag">Arabic</span>
-          <span class="lang-tag">Urdu</span>
           <span class="lang-tag">English</span>
+          <span class="lang-tag">Urdu</span>
+          <!-- <span class="lang-tag">English</span> -->
         </div>
       </div>
       
-      <div class="tutor-card observe stagger-4">
+      <!-- <div class="tutor-card observe stagger-4">
         <div class="tutor-avatar">
           <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&q=80" alt="Ustadha Aisha Rahman, experienced Tajweed instructor">
         </div>
@@ -1867,7 +1890,7 @@ a:focus-visible {
           <span class="lang-tag">English</span>
           <span class="lang-tag">Bengali</span>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
@@ -2008,10 +2031,10 @@ a:focus-visible {
               <option value="noorani">Noorani Qaida</option>
               <option value="reading">Quran Reading</option>
               <option value="tajweed">Tajweed Mastery</option>
-              <option value="hifz">Hifz-ul-Quran</option>
-              <option value="arabic">Arabic Language</option>
-              <option value="tafseer">Tafseer & Translation</option>
-              <option value="islamic">Islamic Studies</option>
+              <!-- <option value="hifz">Hifz-ul-Quran</option> -->
+              <!-- <option value="arabic">Arabic Language</option> -->
+              <!-- <option value="tafseer">Tafseer & Translation</option> -->
+              <!-- <option value="islamic">Islamic Studies</option> -->
               <option value="kids">Kids Quran Classes</option>
             </select>
             <span class="error-msg" id="programError"><i class="fas fa-exclamation-circle"></i> Please select a program</span>
@@ -2063,6 +2086,8 @@ a:focus-visible {
           <li><a href="#why-us">Why Choose Us</a></li>
           <li><a href="#tutors">Our Tutors</a></li>
           <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+
         </ul>
       </div>
       
@@ -2071,9 +2096,9 @@ a:focus-visible {
         <ul class="footer-links">
           <li><a href="#programs">Noorani Qaida</a></li>
           <li><a href="#programs">Tajweed</a></li>
-          <li><a href="#programs">Hifz-ul-Quran</a></li>
-          <li><a href="#programs">Arabic Language</a></li>
-          <li><a href="#programs">Islamic Studies</a></li>
+          <li><a href="#programs">Quran Reading</a></li>
+          <!-- <li><a href="#programs">Arabic Language</a></li> -->
+          <li><a href="#programs">Kids Quran Classes</a></li>
         </ul>
       </div>
       
