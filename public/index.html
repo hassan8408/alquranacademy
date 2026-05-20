@@ -687,11 +687,13 @@ section {
   backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  padding: var(--space-4);
+  padding: 0;
   transition: var(--transition);
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .program-card::before {
@@ -704,6 +706,7 @@ section {
   background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
   opacity: 0;
   transition: var(--transition);
+  z-index: 4;
 }
 
 .program-card:hover {
@@ -717,6 +720,63 @@ section {
   opacity: 1;
 }
 
+.program-image-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.program-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.program-card:hover .program-card-img {
+  transform: scale(1.06);
+}
+
+.program-card-badge {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-full);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.program-card-badge.popular {
+  background: linear-gradient(135deg, #0984E3, #74B9FF);
+}
+
+.program-card-badge.featured {
+  background: linear-gradient(135deg, #6C5CE7, #A29BFE);
+}
+
+.program-card-badge.recommended {
+  background: linear-gradient(135deg, #E17055, #FAB1A0);
+}
+
+.program-card-badge.best-seller {
+  background: linear-gradient(135deg, #00B894, #55EFC4);
+}
+
+.program-card-body {
+  padding: var(--space-4) var(--space-4) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .program-icon {
   width: 56px;
   height: 56px;
@@ -727,7 +787,11 @@ section {
   justify-content: center;
   font-size: 1.5rem;
   color: var(--primary-dark);
-  margin-bottom: var(--space-3);
+  margin-top: -60px;
+  position: relative;
+  z-index: 3;
+  margin-bottom: var(--space-2);
+  border: 3px solid var(--primary);
   box-shadow: var(--shadow-gold), inset 0 1px 0 rgba(255, 255, 255, 0.2);
   transition: var(--transition);
 }
@@ -740,12 +804,308 @@ section {
   font-size: 1.375rem;
   margin-bottom: var(--space-1);
   letter-spacing: -0.015em;
+  color: var(--text-primary);
 }
 
 .program-card p {
   color: var(--text-secondary);
   font-size: 0.9375rem;
   line-height: 1.6;
+  margin-bottom: var(--space-2);
+}
+
+.program-card-meta {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: auto;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: var(--space-3);
+}
+
+.program-card-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.program-card-meta-item i {
+  color: var(--accent-gold);
+}
+
+.program-card-actions {
+  display: flex;
+  gap: var(--space-2);
+  width: 100%;
+}
+
+.program-card-actions .btn-card {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.program-card-actions .btn-card-trial {
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  border: 1px solid var(--accent-gold);
+}
+
+.program-card-actions .btn-card-trial:hover {
+  background: var(--accent-gold-hover);
+  border-color: var(--accent-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.program-card-actions .btn-card-details {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+}
+
+.program-card-actions .btn-card-details:hover {
+  background: var(--glass-hover);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2);
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 20, 30, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: var(--transition);
+}
+
+.modal-content-wrapper {
+  position: relative;
+  z-index: 10001;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--primary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.9);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.modal.active .modal-content-wrapper {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-card {
+  position: relative;
+  padding: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  border-color: var(--accent-gold);
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+
+@media (max-width: 768px) {
+  .modal-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-sidebar {
+    border-right: none !important;
+    border-bottom: 1px solid var(--glass-border);
+  }
+  .modal-content-wrapper {
+    max-height: 95vh;
+  }
+}
+
+.modal-sidebar {
+  background: var(--primary-dark);
+  border-right: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-img-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-sidebar-info {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex-grow: 1;
+}
+
+.modal-meta-item {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+}
+
+.modal-meta-item i {
+  color: var(--accent-gold);
+  font-size: 1.25rem;
+  margin-top: 2px;
+}
+
+.modal-meta-item h4 {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 2px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+.modal-meta-item p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.modal-body {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-body h2 {
+  font-size: 1.75rem;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.modal-subtitle {
+  color: var(--accent-gold);
+  font-weight: 500;
+  margin-bottom: var(--space-3);
+  font-size: 0.9375rem;
+}
+
+.modal-section {
+  margin-bottom: var(--space-4);
+}
+
+.modal-section h3 {
+  font-size: 1.125rem;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 6px;
+}
+
+.modal-learn-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-learn-list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.modal-learn-list li::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--success);
+  font-size: 0.875rem;
+}
+
+.modal-features-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal-feature-tag {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 /* Features Grid */
@@ -1616,7 +1976,7 @@ a:focus-visible {
       
       <div class="hero-image-card">
         <div class="hero-img-container">
-           <img src="./assets/Gemini_Generated_Image_kfnpbrkfnpbrkfnp.png">
+           <img src="./assets/download (19).jpg">
           <!-- <div class="live-class-card">
             <div class="live-indicator">
               <span class="live-dot"></span>
@@ -1639,68 +1999,120 @@ a:focus-visible {
     </div>
     
     <div class="programs-grid">
+      <!-- Noorani Qaida -->
       <div class="program-card observe stagger-1">
-        <div class="program-icon">
-          <i class="fas fa-book-open"></i>
+        <div class="program-image-container">
+          <img src="./assets/noorani-qaida.png" alt="Noorani Qaida Course Image" class="program-card-img">
+          <!-- <span class="program-card-badge popular">Popular</span> -->
         </div>
-        <h3>Noorani Qaida</h3>
-        <p>Master Arabic alphabets and basic Quranic reading with our foundational course for beginners and kids.</p>
+        <div class="program-card-body">
+          <div class="program-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Noorani Qaida</h3>
+          <p>Master Arabic alphabets and basic Quranic reading with our foundational course for beginners and kids.</p>
+          <div class="program-card-meta">
+            <div class="program-card-meta-item">
+              <i class="far fa-clock"></i>
+              <span>Flexible</span>
+            </div>
+            <div class="program-card-meta-item">
+              <i class="fas fa-signal"></i>
+              <span>Beginner</span>
+            </div>
+          </div>
+          <div class="program-card-actions">
+            <button onclick="bookTrial('noorani')" class="btn-card btn-card-trial">Free Trial</button>
+            <button onclick="openCourseModal('noorani')" class="btn-card btn-card-details">View Details</button>
+          </div>
+        </div>
       </div>
       
+      <!-- Quran Reading -->
       <div class="program-card observe stagger-2">
-        <div class="program-icon">
-          <i class="fas fa-book"></i>
+        <div class="program-image-container">
+          <img src="./assets/quran-reading.png" alt="Quran Reading Course Image" class="program-card-img">
+          <!-- <span class="program-card-badge recommended">Recommended</span> -->
         </div>
-        <h3>Quran Reading</h3>
-        <p>Learn to read the Holy Quran fluently with correct pronunciation and understanding of basic rules.</p>
+        <div class="program-card-body">
+          <div class="program-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3>Quran Reading</h3>
+          <p>Learn to read the Holy Quran fluently with correct pronunciation and understanding of basic rules.</p>
+          <div class="program-card-meta">
+            <div class="program-card-meta-item">
+              <i class="far fa-clock"></i>
+              <span>Flexible</span>
+            </div>
+            <div class="program-card-meta-item">
+              <i class="fas fa-signal"></i>
+              <span>Beginner</span>
+            </div>
+          </div>
+          <div class="program-card-actions">
+            <button onclick="bookTrial('reading')" class="btn-card btn-card-trial">Free Trial</button>
+            <button onclick="openCourseModal('reading')" class="btn-card btn-card-details">View Details</button>
+          </div>
+        </div>
       </div>
       
+      <!-- Tajweed Mastery -->
       <div class="program-card observe stagger-3">
-        <div class="program-icon">
-          <i class="fas fa-pen-nib"></i>
+        <div class="program-image-container">
+          <img src="./assets/tajweed-mastery.png" alt="Tajweed Mastery Course Image" class="program-card-img">
+          <!-- <span class="program-card-badge featured">Featured</span> -->
         </div>
-        <h3>Tajweed Mastery</h3>
-        <p>Perfect your recitation with advanced Tajweed rules and beautiful Quranic pronunciation techniques.</p>
+        <div class="program-card-body">
+          <div class="program-icon">
+            <i class="fas fa-pen-nib"></i>
+          </div>
+          <h3>Tajweed Mastery</h3>
+          <p>Perfect your recitation with advanced Tajweed rules and beautiful Quranic pronunciation techniques.</p>
+          <div class="program-card-meta">
+            <div class="program-card-meta-item">
+              <i class="far fa-clock"></i>
+              <span>Flexible</span>
+            </div>
+            <div class="program-card-meta-item">
+              <i class="fas fa-signal"></i>
+              <span>All Levels</span>
+            </div>
+          </div>
+          <div class="program-card-actions">
+            <button onclick="bookTrial('tajweed')" class="btn-card btn-card-trial">Free Trial</button>
+            <button onclick="openCourseModal('tajweed')" class="btn-card btn-card-details">View Details</button>
+          </div>
+        </div>
       </div>
       
-      <!-- <div class="program-card observe stagger-4">
-        <div class="program-icon">
-          <i class="fas fa-star-and-crescent"></i>
-        </div>
-        <h3>Hifz-ul-Quran</h3>
-        <p>Memorize the Holy Quran with our structured Hifz program and expert guidance from Huffaz.</p>
-      </div> -->
-      
-      <!-- <div class="program-card observe stagger-1">
-        <div class="program-icon">
-          <i class="fas fa-language"></i>
-        </div>
-        <h3>Arabic Language</h3>
-        <p>Understand the Quran deeply by learning classical Arabic grammar, vocabulary, and composition.</p>
-      </div> -->
-      
-      <!-- <div class="program-card observe stagger-2">
-        <div class="program-icon">
-          <i class="fas fa-book-quran"></i>
-        </div>
-        <h3>Tafseer & Translation</h3>
-        <p>Explore the meanings, context, and wisdom of Quranic verses with detailed Tafseer sessions.</p>
-      </div> -->
-      
-      <!-- <div class="program-card observe stagger-3">
-        <div class="program-icon">
-          <i class="fas fa-mosque"></i>
-        </div>
-        <h3>Islamic Studies</h3>
-        <p>Learn essential Islamic teachings, Duas, Ahadith, and Islamic etiquette for daily life guidance.</p>
-      </div> -->
-      
+      <!-- Kids Quran Classes -->
       <div class="program-card observe stagger-4">
-        <div class="program-icon">
-          <i class="fas fa-child"></i>
+        <div class="program-image-container">
+          <img src="./assets/kids-quran.png" alt="Kids Quran Classes Course Image" class="program-card-img">
+          <!-- <span class="program-card-badge best-seller">Best Seller</span> -->
         </div>
-        <h3>Kids Quran Classes</h3>
-        <p>Fun and interactive Quran classes specially designed for children with engaging teaching methods.</p>
+        <div class="program-card-body">
+          <div class="program-icon">
+            <i class="fas fa-child"></i>
+          </div>
+          <h3>Kids Quran Classes</h3>
+          <p>Fun and interactive Quran classes specially designed for children with engaging teaching methods.</p>
+          <div class="program-card-meta">
+            <div class="program-card-meta-item">
+              <i class="far fa-clock"></i>
+              <span>Flexible</span>
+            </div>
+            <div class="program-card-meta-item">
+              <i class="fas fa-signal"></i>
+              <span>Kids</span>
+            </div>
+          </div>
+          <div class="program-card-actions">
+            <button onclick="bookTrial('kids')" class="btn-card btn-card-trial">Free Trial</button>
+            <button onclick="openCourseModal('kids')" class="btn-card btn-card-details">View Details</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -2122,6 +2534,57 @@ a:focus-visible {
   </div>
 </footer>
 
+<!-- Course Details Modal -->
+<div id="courseModal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" onclick="closeCourseModal()"></div>
+  <div class="modal-content-wrapper">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeCourseModal()" aria-label="Close modal">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-sidebar">
+          <div class="modal-img-container">
+            <img id="modalImage" src="" alt="Course Image">
+          </div>
+          <div class="modal-sidebar-info">
+            <div class="modal-meta-item">
+              <i class="far fa-clock"></i>
+              <div>
+                <h4>Duration</h4>
+                <p id="modalDuration"></p>
+              </div>
+            </div>
+            <div class="modal-meta-item">
+              <i class="fas fa-signal"></i>
+              <div>
+                <h4>Level</h4>
+                <p id="modalLevel"></p>
+              </div>
+            </div>
+            <button id="modalBookBtn" class="btn btn-primary" style="width: 100%; margin-top: var(--space-3); justify-content: center;">
+              <span>Book Free Trial</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="modal-body">
+          <h2 id="modalTitle"></h2>
+          <p id="modalSubtitle" class="modal-subtitle"></p>
+          
+          <div class="modal-section">
+            <h3>What you'll learn</h3>
+            <ul id="modalLearnList" class="modal-learn-list"></ul>
+          </div>
+          
+          <div class="modal-section" style="margin-bottom: 0;">
+            <h3>Course Features</h3>
+            <div id="modalFeatures" class="modal-features-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Toast -->
 <div class="toast" id="toast">
   <i class="fas fa-check-circle"></i>
@@ -2433,6 +2896,169 @@ newsletterForm.addEventListener('submit', (e) => {
   showToast('Thank you for subscribing to our newsletter!');
   newsletterForm.reset();
 });
+
+// Course Details Data
+const courseDetails = {
+  noorani: {
+    title: "Noorani Qaida",
+    subtitle: "Foundational Arabic & Quranic Reading",
+    image: "./assets/noorani-qaida.png",
+    duration: "Flexible Duration",
+    level: "Beginner",
+    learn: [
+      "Pronounce Arabic letters correctly from their origin (Makharij)",
+      "Identify and read compound Arabic letters (Murakkabat)",
+      "Master short vowels (Harakat) and long vowels (Madd)",
+      "Learn rules of Tanween, Sakoon, and Shaddah",
+      "Begin reading basic Quranic words and short verses"
+    ],
+    features: ["1-on-1 Interactive Classes", "Certified Tutor", "Progress Report", "Flexible Schedule"]
+  },
+  reading: {
+    title: "Quran Reading",
+    subtitle: "Fluent Recitation of the Holy Quran",
+    image: "./assets/quran-reading.png",
+    duration: "3 - 6 Months",
+    level: "Beginner to Intermediate",
+    learn: [
+      "Recite the Holy Quran fluently and smoothly",
+      "Apply basic rules of Tajweed while reciting",
+      "Improve pronunciation and flow of recitation",
+      "Memorize essential daily Duas and short Surahs",
+      "Learn proper etiquette (Adab) of Quran recitation"
+    ],
+    features: ["Certified Quran Qaris", "Individual Attention", "Weekly Feedback", "Female Tutors Available"]
+  },
+  tajweed: {
+    title: "Tajweed Mastery",
+    subtitle: "Advanced Recitation & Pronunciation Rules",
+    image: "./assets/tajweed-mastery.png",
+    duration: "6 - 12 Months",
+    level: "All Levels",
+    learn: [
+      "Master advanced rules of Tajweed (Noon/Meem Sakinah, Mudood)",
+      "Recite with beautiful melodic tone and proper rhythm",
+      "Understand stopping and starting rules (Waqf and Ibtida)",
+      "Correct common hidden mistakes in recitation",
+      "Gain confidence in public Quran recitation"
+    ],
+    features: ["Ijazah Certified Scholars", "Voice Correction", "Melodic Recitation Coaching", "Detailed Feedback"]
+  },
+  kids: {
+    title: "Kids Quran Classes",
+    subtitle: "Engaging & Fun Quranic Education for Children",
+    image: "./assets/kids-quran.png",
+    duration: "Flexible Schedule",
+    level: "Kids (Ages 4-15)",
+    learn: [
+      "Learn Arabic letters through engaging, gamified lessons",
+      "Read Quran with simple and interactive methods",
+      "Memorize Juz Amma (30th Juz) with correct Tajweed",
+      "Learn basic Islamic beliefs, manners, and daily Duas",
+      "Develop a lifelong love and connection with the Quran"
+    ],
+    features: ["Child-Friendly Tutors", "Interactive Digital Tools", "Fun Learning Activities", "Parent-Teacher Meetings"]
+  }
+};
+
+// Course Modal Interactivity
+const courseModal = document.getElementById('courseModal');
+const modalImage = document.getElementById('modalImage');
+const modalTitle = document.getElementById('modalTitle');
+const modalSubtitle = document.getElementById('modalSubtitle');
+const modalDuration = document.getElementById('modalDuration');
+const modalLevel = document.getElementById('modalLevel');
+const modalLearnList = document.getElementById('modalLearnList');
+const modalFeatures = document.getElementById('modalFeatures');
+const modalBookBtn = document.getElementById('modalBookBtn');
+
+function openCourseModal(courseId) {
+  const course = courseDetails[courseId];
+  if (!course) return;
+
+  // Populate modal content
+  modalImage.src = course.image;
+  modalImage.alt = course.title + " Course Image";
+  modalTitle.textContent = course.title;
+  modalSubtitle.textContent = course.subtitle;
+  modalDuration.textContent = course.duration;
+  modalLevel.textContent = course.level;
+
+  // Populate what you'll learn
+  modalLearnList.innerHTML = '';
+  course.learn.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    modalLearnList.appendChild(li);
+  });
+
+  // Populate features tags
+  modalFeatures.innerHTML = '';
+  course.features.forEach(tag => {
+    const span = document.createElement('span');
+    span.className = 'modal-feature-tag';
+    span.textContent = tag;
+    modalFeatures.appendChild(span);
+  });
+
+  // Update book button callback
+  modalBookBtn.onclick = () => {
+    bookTrial(courseId);
+  };
+
+  // Show modal
+  courseModal.classList.add('active');
+  courseModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCourseModal() {
+  courseModal.classList.remove('active');
+  courseModal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+// Close on Escape key press
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && courseModal.classList.contains('active')) {
+    closeCourseModal();
+  }
+});
+
+// Book Trial Interaction (Scroll and Auto-Select)
+function bookTrial(courseId) {
+  closeCourseModal();
+
+  const programSelect = document.getElementById('program');
+  if (programSelect) {
+    programSelect.value = courseId;
+    // Trigger change event to clear errors if form validation is listening
+    const event = new Event('change');
+    programSelect.dispatchEvent(event);
+  }
+
+  const contactSection = document.getElementById('contact');
+  if (contactSection) {
+    const offset = 80;
+    const targetPosition = contactSection.offsetTop - offset;
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+
+    // Highlight form with a subtle pulse/border animation
+    const formContainer = document.querySelector('.contact-form-container');
+    if (formContainer) {
+      formContainer.style.transition = 'all 0.3s ease';
+      formContainer.style.borderColor = 'var(--accent-gold)';
+      formContainer.style.boxShadow = '0 0 24px rgba(232, 184, 73, 0.4)';
+      setTimeout(() => {
+        formContainer.style.borderColor = 'var(--glass-border)';
+        formContainer.style.boxShadow = 'inset 0 1px 0 rgba(255, 255, 255, 0.03)';
+      }, 1500);
+    }
+  }
+}
 </script>
 
 </body>
