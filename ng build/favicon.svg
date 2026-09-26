@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#08141E"/>
+  <!-- Minaret -->
+  <path d="M19 16 C15 20 13 24 13 27 L25 27 C25 24 23 20 19 16 Z" fill="#E8B849"/>
+  <rect x="13" y="27" width="12" height="25" rx="1" fill="#E8B849"/>
+  <!-- Main Dome -->
+  <path d="M43 14 C34 22 28 26 28 32 L58 32 C58 26 52 22 43 14 Z" fill="#E8B849"/>
+  <!-- Main Building -->
+  <rect x="27" y="32" width="32" height="20" rx="2" fill="#E8B849"/>
+  <!-- Arches -->
+  <path d="M32 52 V41 C32 37.5 38 37.5 38 41 V52 Z" fill="#08141E"/>
+  <path d="M41 52 V41 C41 37.5 47 37.5 47 41 V52 Z" fill="#08141E"/>
+  <path d="M50 52 V43 C50 40 55 40 55 43 V52 Z" fill="#08141E"/>
+</svg>

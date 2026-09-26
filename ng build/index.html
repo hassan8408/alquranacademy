@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Al-Quran Academy | Learn Quran Online with Certified Tutors</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <i class="fas fa-mosque preloader-icon"></i>
+  </div>
+
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/+923223838591" class="whatsapp-float" aria-label="Contact us on WhatsApp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Al-Quran Academy Home">
+        <i class="fas fa-mosque"></i>
+        <span>Al-Quran Academy</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li>
+          <a href="index.html" class="active">
+            <span>Home</span>
+            <i class="fas fa-chevron-right nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <span>About</span>
+            <i class="fas fa-chevron-right nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="services.html">
+            <span>Programs</span>
+            <i class="fas fa-chevron-right nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            <span>Contact</span>
+            <i class="fas fa-chevron-right nav-arrow"></i>
+          </a>
+        </li>
+
+        <li class="mobile-nav-cta">
+          <a href="contact.html" class="btn btn-primary mobile-trial-btn">
+            <span>Book Free Trial Class</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <div class="mobile-nav-contacts">
+            <a href="https://wa.me/+923223838591" class="mobile-contact-pill whatsapp" target="_blank" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="tel:+923223838591" class="mobile-contact-pill phone" aria-label="Call Academy">
+              <i class="fas fa-phone-alt"></i>
+              <span>Call Us</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-nav-desktop">
+          <span>Start Free Trial</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- Hero Section -->
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="pattern-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div class="badge">
+              <i class="fas fa-star-and-crescent"></i>
+              <span>BISMILLAH - TRUSTED BY 10,000+ FAMILIES</span>
+            </div>
+            <h1>Learn Quran Online with Certified Tutors</h1>
+            <p>Experience personalized Quran learning from the comfort of your home with our certified male and female
+              tutors. Flexible timings, interactive classes, and proven teaching methodology.</p>
+            <div class="hero-cta">
+              <a href="contact.html" class="btn btn-primary">
+                <span>Book Free Trial Class</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a href="#programs" class="btn btn-secondary">
+                <i class="fas fa-play-circle"></i>
+                <span>View Programs</span>
+              </a>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h3 data-count="10000">0</h3>
+                <p>Students</p>
+              </div>
+              <div class="stat-item">
+                <h3 data-count="50">0</h3>
+                <p>Tutors</p>
+              </div>
+              <div class="stat-item">
+                <h3 data-count="30">0</h3>
+                <p>Countries</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image-card">
+            <div class="hero-img-container">
+              <img src="./assets/hero-quran.jpg" alt="Student reciting Holy Quran at Al-Quran Academy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs">
+      <div class="container">
+        <div class="section-header observe">
+          <h2>Our Programs</h2>
+          <p>Comprehensive Quran courses designed for all ages and skill levels, from beginners to advanced learners</p>
+        </div>
+
+        <div class="programs-slider-wrapper">
+          <button class="programs-nav-btn prev-btn" id="programsPrevBtn" aria-label="Previous Programs">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="programs-slider-track-container" id="programsTrackContainer">
+            <div class="programs-slider-track" id="programsTrack">
+              <!-- Noorani Qaida -->
+              <div class="program-card observe stagger-1">
+                <div class="program-image-container">
+                  <img src="./assets/noorani-qaida.png" alt="Noorani Qaida Course Image" class="program-card-img">
+                  <!-- <span class="program-card-badge popular">Popular</span> -->
+                </div>
+                <div class="program-card-body">
+                  <div class="program-icon">
+                    <i class="fas fa-book-open"></i>
+                  </div>
+                  <h3>Noorani Qaida</h3>
+                  <p>Master Arabic alphabets and basic Quranic reading with our foundational course for beginners and
+                    kids.</p>
+                  <div class="program-card-meta">
+                    <div class="program-card-meta-item">
+                      <i class="far fa-clock"></i>
+                      <span>Flexible</span>
+                    </div>
+                    <div class="program-card-meta-item">
+                      <i class="fas fa-signal"></i>
+                      <span>Beginner</span>
+                    </div>
+                  </div>
+                  <div class="program-card-actions">
+                    <button onclick="bookTrial('noorani')" class="btn-card btn-card-trial">Free Trial</button>
+                    <button onclick="openCourseModal('noorani')" class="btn-card btn-card-details">View Details</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quran Reading -->
+              <div class="program-card observe stagger-2">
+                <div class="program-image-container">
+                  <img src="./assets/quran-reading.png" alt="Quran Reading Course Image" class="program-card-img">
+                  <!-- <span class="program-card-badge recommended">Recommended</span> -->
+                </div>
+                <div class="program-card-body">
+                  <div class="program-icon">
+                    <i class="fas fa-book"></i>
+                  </div>
+                  <h3>Quran Reading</h3>
+                  <p>Learn to read the Holy Quran fluently with correct pronunciation and understanding of basic rules.
+                  </p>
+                  <div class="program-card-meta">
+                    <div class="program-card-meta-item">
+                      <i class="far fa-clock"></i>
+                      <span>Flexible</span>
+                    </div>
+                    <div class="program-card-meta-item">
+                      <i class="fas fa-signal"></i>
+                      <span>Beginner</span>
+                    </div>
+                  </div>
+                  <div class="program-card-actions">
+                    <button onclick="bookTrial('reading')" class="btn-card btn-card-trial">Free Trial</button>
+                    <button onclick="openCourseModal('reading')" class="btn-card btn-card-details">View Details</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tajweed Mastery -->
+              <div class="program-card observe stagger-3">
+                <div class="program-image-container">
+                  <img src="./assets/tajweed-mastery.png" alt="Tajweed Mastery Course Image" class="program-card-img">
+                  <!-- <span class="program-card-badge featured">Featured</span> -->
+                </div>
+                <div class="program-card-body">
+                  <div class="program-icon">
+                    <i class="fas fa-pen-nib"></i>
+                  </div>
+                  <h3>Tajweed Mastery</h3>
+                  <p>Perfect your recitation with advanced Tajweed rules and beautiful Quranic pronunciation techniques.
+                  </p>
+                  <div class="program-card-meta">
+                    <div class="program-card-meta-item">
+                      <i class="far fa-clock"></i>
+                      <span>Flexible</span>
+                    </div>
+                    <div class="program-card-meta-item">
+                      <i class="fas fa-signal"></i>
+                      <span>All Levels</span>
+                    </div>
+                  </div>
+                  <div class="program-card-actions">
+                    <button onclick="bookTrial('tajweed')" class="btn-card btn-card-trial">Free Trial</button>
+                    <button onclick="openCourseModal('tajweed')" class="btn-card btn-card-details">View Details</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Kids Quran Classes -->
+              <div class="program-card observe stagger-4">
+                <div class="program-image-container">
+                  <img src="./assets/kids-quran.png" alt="Kids Quran Classes Course Image" class="program-card-img">
+                  <!-- <span class="program-card-badge best-seller">Best Seller</span> -->
+                </div>
+                <div class="program-card-body">
+                  <div class="program-icon">
+                    <i class="fas fa-child"></i>
+                  </div>
+                  <h3>Kids Quran Classes</h3>
+                  <p>Fun and interactive Quran classes specially designed for children with engaging teaching methods.
+                  </p>
+                  <div class="program-card-meta">
+                    <div class="program-card-meta-item">
+                      <i class="far fa-clock"></i>
+                      <span>Flexible</span>
+                    </div>
+                    <div class="program-card-meta-item">
+                      <i class="fas fa-signal"></i>
+                      <span>Kids</span>
+                    </div>
+                  </div>
+                  <div class="program-card-actions">
+                    <button onclick="bookTrial('kids')" class="btn-card btn-card-trial">Free Trial</button>
+                    <button onclick="openCourseModal('kids')" class="btn-card btn-card-details">View Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="programs-nav-btn next-btn" id="programsNextBtn" aria-label="Next Programs">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="programs-dots" id="programsDots"></div>
+      </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" style="background: var(--glass-bg);">
+      <div class="container">
+        <div class="section-header observe">
+          <h2>Why Al-Quran Academy</h2>
+          <p>We combine traditional Islamic teaching methods with modern technology to deliver the best Quran learning
+            experience</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card observe stagger-1">
+            <div class="feature-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Certified Tutors</h3>
+              <p>Learn from Ijazah certified and experienced Qaris with proven teaching track records.</p>
+            </div>
+          </div>
+
+          <!-- <div class="feature-card observe stagger-2">
+        <div class="feature-icon">
+          <i class="fas fa-female"></i>
+        </div>
+        <div class="feature-content">
+          <h3>Female Tutors Available</h3>
+          <p>Qualified female teachers available for sisters and girls in a comfortable learning environment.</p>
+        </div>
+      </div> -->
+
+          <div class="feature-card observe stagger-3">
+            <div class="feature-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Flexible Timings</h3>
+              <p>Choose your preferred time slots 24/7. We accommodate all time zones worldwide.</p>
+            </div>
+          </div>
+
+          <div class="feature-card observe stagger-4">
+            <div class="feature-icon">
+              <i class="fas fa-gift"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Free Trial Classes</h3>
+              <p>Experience our teaching quality with 3 free trial classes before making any commitment.</p>
+            </div>
+          </div>
+
+          <div class="feature-card observe stagger-1">
+            <div class="feature-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Worldwide Students</h3>
+              <p>Serving students from 30+ countries including USA, UK, Canada, Australia, and UAE.</p>
+            </div>
+          </div>
+
+          <div class="feature-card observe stagger-2">
+            <div class="feature-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <div class="feature-content">
+              <h3>24/7 Support</h3>
+              <p>Round-the-clock customer support to assist you with any queries or technical issues.</p>
+            </div>
+          </div>
+
+          <div class="feature-card observe stagger-3">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Progress Tracking</h3>
+              <p>Regular assessments and detailed progress reports shared with parents and students.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tutors Section -->
+    <section id="tutors">
+      <div class="container">
+        <div class="section-header observe">
+          <h2>Scholars who inspire</h2>
+          <p>Meet our team of certified and experienced Quran tutors dedicated to your spiritual journey</p>
+        </div>
+
+        <div class="tutors-grid">
+          <div class="tutor-card observe stagger-1">
+            <div class="tutor-avatar">
+              <img src="./assets/ChatGPT Image May 19, 2026, 12_24_23 PM.png" alt="Hafiz Hassan, senior Quran tutor">
+            </div>
+            <h3>Hafiz Hassan</h3>
+            <div class="tutor-title">Senior Tajweed Specialist</div>
+            <div class="tutor-rating" aria-label="5 star rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <div class="tutor-meta">
+              <span><i class="fas fa-briefcase"></i> 10+ Years</span>
+              <span><i class="fas fa-users"></i> 500+ Students</span>
+            </div>
+            <div class="tutor-languages">
+              <span class="lang-tag">English</span>
+              <span class="lang-tag">Urdu</span>
+            </div>
+          </div>
+
+          <div class="tutor-card observe stagger-2">
+            <div class="tutor-avatar">
+              <img src="./assets/tutor-umer.jpg" alt="Hafiz Umer, certified Quran teacher">
+            </div>
+            <h3>Hafiz Umer</h3>
+            <div class="tutor-title">Qira'at & Nazra Instructor</div>
+            <div class="tutor-rating" aria-label="5 star rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <div class="tutor-meta">
+              <span><i class="fas fa-briefcase"></i> 7+ Years</span>
+              <span><i class="fas fa-users"></i> 320+ Students</span>
+            </div>
+            <div class="tutor-languages">
+              <span class="lang-tag">English</span>
+              <span class="lang-tag">Urdu</span>
+            </div>
+          </div>
+
+          <div class="tutor-card observe stagger-3">
+            <div class="tutor-avatar">
+              <img src="./assets/tutor-fatima.jpg" alt="Hafiza Noor Fatima, female Quran tutor">
+            </div>
+            <h3>Hafiza Noor Fatima</h3>
+            <div class="tutor-title">Kids & Sisters Specialist</div>
+            <div class="tutor-rating" aria-label="5 star rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <div class="tutor-meta">
+              <span><i class="fas fa-briefcase"></i> 6+ Years</span>
+              <span><i class="fas fa-users"></i> 400+ Students</span>
+            </div>
+            <div class="tutor-languages">
+              <span class="lang-tag">English</span>
+              <span class="lang-tag">Urdu</span>
+            </div>
+          </div>
+
+          <div class="tutor-card observe stagger-4">
+            <div class="tutor-avatar">
+              <img src="./assets/tutor-iqra.jpg" alt="Hafiza Iqra, beginner Qaida mentor">
+            </div>
+            <h3>Hafiza Iqra</h3>
+            <div class="tutor-title">Noorani Qaida & Duas Expert</div>
+            <div class="tutor-rating" aria-label="5 star rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(5.0)</span>
+            </div>
+            <div class="tutor-meta">
+              <span><i class="fas fa-briefcase"></i> 5+ Years</span>
+              <span><i class="fas fa-users"></i> 350+ Students</span>
+            </div>
+            <div class="tutor-languages">
+              <span class="lang-tag">English</span>
+              <span class="lang-tag">Urdu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" style="background: var(--glass-bg);">
+      <div class="container">
+        <div class="section-header observe">
+          <h2>Loved by families worldwide</h2>
+          <p>See what our students and parents say about their Quran learning journey with us</p>
+        </div>
+
+        <div class="testimonial-container observe">
+          <div class="testimonial-slider">
+            <div class="testimonial-track" id="testimonialTrack">
+              <div class="testimonial">
+                <div class="stars" aria-label="5 star rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>"Al-Quran Academy has been a blessing for our family. My daughter has improved her Tajweed
+                  tremendously in just 3 months. The tutor is very patient and professional."</p>
+                <div class="testimonial-author">
+                  <img src="https://i.pravatar.cc/100?img=5" alt="Sarah Ahmed">
+                  <div class="author-info">
+                    <h4>Sarah Ahmed</h4>
+                    <span>Parent from UK</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial">
+                <div class="stars" aria-label="5 star rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p>"The flexibility of timing is what I love most. Being a working professional, I can schedule classes
+                  after work. My Quran recitation has improved significantly. Highly recommended!"</p>
+                <div class="testimonial-author">
+                  <img src="https://i.pravatar.cc/100?img=12" alt="Mohammad Hassan">
+                  <div class="author-info">
+                    <h4>Mohammad Hassan</h4>
+                    <span>Student from UK</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="testimonial">
+            <div class="stars" aria-label="5 star rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>"My two sons are enrolled in the Hifz program. The teachers are excellent and the progress tracking helps us monitor their journey. Best decision we made for their Islamic education."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/100?img=9" alt="Aisha Khan">
+              <div class="author-info">
+                <h4>Aisha Khan</h4>
+                <span>Parent from Canada</span>
+              </div>
+            </div>
+          </div> -->
+            </div>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn" id="prevBtn" aria-label="Previous testimonial">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn" id="nextBtn" aria-label="Next testimonial">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="slider-dots" id="sliderDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-wrapper">
+      <div class="container cta-container">
+        <div class="cta-section observe">
+          <div class="pattern-overlay"></div>
+          <div class="cta-badge">
+            <i class="fas fa-gift"></i>
+            <span>3 Free Trial Classes</span>
+          </div>
+          <h2>Start your Quran learning journey today</h2>
+          <p>Join thousands of students worldwide who are learning Quran with certified tutors. Book your free trial
+            now!</p>
+          <a href="contact.html" class="btn btn-primary"
+            style="font-size: 1.125rem; padding: 16px 32px; position: relative; z-index: 1;">
+            <span>Claim Your Free Trial</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: var(--space-2);">
+            <i class="fas fa-mosque"></i>
+            <span>Al-Quran Academy</span>
+          </div>
+          <p>Empowering Muslims worldwide to learn Quran with authentic teaching methods and certified tutors since
+            2015.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/+923223838591" target="_blank" aria-label="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Programs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Courses</h3>
+          <ul class="footer-links">
+            <li><a href="#programs">Noorani Qaida</a></li>
+            <li><a href="#programs">Tajweed</a></li>
+            <li><a href="#programs">Quran Reading</a></li>
+            <!-- <li><a href="#programs">Arabic Language</a></li> -->
+            <li><a href="#programs">Kids Quran Classes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get Islamic insights and course updates</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email" required aria-label="Email address">
+            <button type="submit" class="btn btn-primary" style="padding: 12px 16px;" aria-label="Subscribe">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 Al-Quran Academy. All rights reserved. | Privacy Policy | Terms of Service</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Course Details Modal -->
+  <div id="courseModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeCourseModal()"></div>
+    <div class="modal-content-wrapper">
+      <div class="modal-card">
+        <button class="modal-close" onclick="closeCourseModal()" aria-label="Close modal">&times;</button>
+        <div class="modal-grid">
+          <div class="modal-sidebar">
+            <div class="modal-img-container">
+              <img id="modalImage" src="" alt="Course Image">
+            </div>
+            <div class="modal-sidebar-info">
+              <div class="modal-meta-item">
+                <i class="far fa-clock"></i>
+                <div>
+                  <h4>Duration</h4>
+                  <p id="modalDuration"></p>
+                </div>
+              </div>
+              <div class="modal-meta-item">
+                <i class="fas fa-signal"></i>
+                <div>
+                  <h4>Level</h4>
+                  <p id="modalLevel"></p>
+                </div>
+              </div>
+              <button id="modalBookBtn" class="btn btn-primary"
+                style="width: 100%; margin-top: var(--space-3); justify-content: center;">
+                <span>Book Free Trial</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <h2 id="modalTitle"></h2>
+            <p id="modalSubtitle" class="modal-subtitle"></p>
+
+            <div class="modal-section">
+              <h3>What you'll learn</h3>
+              <ul id="modalLearnList" class="modal-learn-list"></ul>
+            </div>
+
+            <div class="modal-section" style="margin-bottom: 0;">
+              <h3>Course Features</h3>
+              <div id="modalFeatures" class="modal-features-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage"></span>
+  </div>
+
+  <script>
+    // Preloader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('preloader').classList.add('hidden');
+      }, 500);
+    });
+
+    // Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const themeIcon = themeToggle.querySelector('i');
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(savedTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon(newTheme);
+    });
+
+    function updateThemeIcon(theme) {
+      themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    // Mobile Navigation & Drawer Logic
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const navBackdrop = document.getElementById('navBackdrop');
+
+    function toggleMenu(forceClose = false) {
+      const isCurrentlyOpen = navMenu.classList.contains('active');
+      const shouldOpen = forceClose ? false : !isCurrentlyOpen;
+
+      if (shouldOpen) {
+        navMenu.classList.add('active');
+        navBackdrop.classList.add('active');
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.querySelector('i').className = 'fas fa-times';
+        document.body.style.overflow = 'hidden';
+      } else {
+        navMenu.classList.remove('active');
+        navBackdrop.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.querySelector('i').className = 'fas fa-bars';
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (hamburger && navMenu && navBackdrop) {
+      hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+      });
+      navBackdrop.addEventListener('click', () => toggleMenu(true));
+
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 860) {
+            toggleMenu(true);
+          }
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+          toggleMenu(true);
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 860 && navMenu.classList.contains('active')) {
+          toggleMenu(true);
+        }
+      });
+    }
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const targetPosition = target.offsetTop - offset;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.pageYOffset > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Fade in on scroll with stagger
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.observe').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Counter Animation
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          entry.target.classList.add('counted');
+          animateCounter(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('[data-count]').forEach(el => {
+      counterObserver.observe(el);
+    });
+
+    function animateCounter(element) {
+      const target = parseInt(element.getAttribute('data-count'));
+      const duration = 2000;
+      const step = target / (duration / 16);
+      let current = 0;
+
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          element.textContent = target.toLocaleString() + '+';
+          clearInterval(timer);
+        } else {
+          element.textContent = Math.floor(current).toLocaleString() + '+';
+        }
+      }, 16);
+    }
+
+    // Testimonial Slider
+    const track = document.getElementById('testimonialTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('sliderDots');
+    const testimonials = document.querySelectorAll('.testimonial');
+
+    let currentSlide = 0;
+    const totalSlides = testimonials.length;
+    let autoSlideInterval;
+
+    // Create dots
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'dot';
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      dot.setAttribute('aria-label', `Go to testimonial ${i + 1}`);
+      dotsContainer.appendChild(dot);
+    }
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateSlider() {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateSlider();
+      resetAutoSlide();
+    }
+
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+
+    // Auto-slide with pause on hover
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    startAutoSlide();
+
+    const sliderContainer = document.querySelector('.testimonial-container');
+    sliderContainer.addEventListener('mouseenter', () => {
+      clearInterval(autoSlideInterval);
+    });
+
+    sliderContainer.addEventListener('mouseleave', () => {
+      startAutoSlide();
+    });
+
+    // Toast Notification
+    function showToast(message, isError = false) {
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toastMessage');
+      toastMessage.textContent = message;
+      toast.classList.toggle('error', isError);
+      toast.classList.add('show');
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    // Newsletter Form
+    const newsletterForm = document.getElementById('newsletterForm');
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      showToast('Thank you for subscribing to our newsletter!');
+      newsletterForm.reset();
+    });
+
+    // Course Details Data
+    const courseDetails = {
+      noorani: {
+        title: "Noorani Qaida",
+        subtitle: "Foundational Arabic & Quranic Reading",
+        image: "./assets/noorani-qaida.png",
+        duration: "Flexible Duration",
+        level: "Beginner",
+        learn: [
+          "Pronounce Arabic letters correctly from their origin (Makharij)",
+          "Identify and read compound Arabic letters (Murakkabat)",
+          "Master short vowels (Harakat) and long vowels (Madd)",
+          "Learn rules of Tanween, Sakoon, and Shaddah",
+          "Begin reading basic Quranic words and short verses"
+        ],
+        features: ["1-on-1 Interactive Classes", "Certified Tutor", "Progress Report", "Flexible Schedule"]
+      },
+      reading: {
+        title: "Quran Reading",
+        subtitle: "Fluent Recitation of the Holy Quran",
+        image: "./assets/quran-reading.png",
+        duration: "3 - 6 Months",
+        level: "Beginner to Intermediate",
+        learn: [
+          "Recite the Holy Quran fluently and smoothly",
+          "Apply basic rules of Tajweed while reciting",
+          "Improve pronunciation and flow of recitation",
+          "Memorize essential daily Duas and short Surahs",
+          "Learn proper etiquette (Adab) of Quran recitation"
+        ],
+        features: ["Certified Quran Qaris", "Individual Attention", "Weekly Feedback", "Female Tutors Available"]
+      },
+      tajweed: {
+        title: "Tajweed Mastery",
+        subtitle: "Advanced Recitation & Pronunciation Rules",
+        image: "./assets/tajweed-mastery.png",
+        duration: "6 - 12 Months",
+        level: "All Levels",
+        learn: [
+          "Master advanced rules of Tajweed (Noon/Meem Sakinah, Mudood)",
+          "Recite with beautiful melodic tone and proper rhythm",
+          "Understand stopping and starting rules (Waqf and Ibtida)",
+          "Correct common hidden mistakes in recitation",
+          "Gain confidence in public Quran recitation"
+        ],
+        features: ["Ijazah Certified Scholars", "Voice Correction", "Melodic Recitation Coaching", "Detailed Feedback"]
+      },
+      kids: {
+        title: "Kids Quran Classes",
+        subtitle: "Engaging & Fun Quranic Education for Children",
+        image: "./assets/kids-quran.png",
+        duration: "Flexible Schedule",
+        level: "Kids (Ages 4-15)",
+        learn: [
+          "Learn Arabic letters through engaging, gamified lessons",
+          "Read Quran with simple and interactive methods",
+          "Memorize Juz Amma (30th Juz) with correct Tajweed",
+          "Learn basic Islamic beliefs, manners, and daily Duas",
+          "Develop a lifelong love and connection with the Quran"
+        ],
+        features: ["Child-Friendly Tutors", "Interactive Digital Tools", "Fun Learning Activities", "Parent-Teacher Meetings"]
+      }
+    };
+
+    // Course Modal Interactivity
+    const courseModal = document.getElementById('courseModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const modalDuration = document.getElementById('modalDuration');
+    const modalLevel = document.getElementById('modalLevel');
+    const modalLearnList = document.getElementById('modalLearnList');
+    const modalFeatures = document.getElementById('modalFeatures');
+    const modalBookBtn = document.getElementById('modalBookBtn');
+
+    function openCourseModal(courseId) {
+      const course = courseDetails[courseId];
+      if (!course) return;
+
+      // Populate modal content
+      modalImage.src = course.image;
+      modalImage.alt = course.title + " Course Image";
+      modalTitle.textContent = course.title;
+      modalSubtitle.textContent = course.subtitle;
+      modalDuration.textContent = course.duration;
+      modalLevel.textContent = course.level;
+
+      // Populate what you'll learn
+      modalLearnList.innerHTML = '';
+      course.learn.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        modalLearnList.appendChild(li);
+      });
+
+      // Populate features tags
+      modalFeatures.innerHTML = '';
+      course.features.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'modal-feature-tag';
+        span.textContent = tag;
+        modalFeatures.appendChild(span);
+      });
+
+      // Update book button callback
+      modalBookBtn.onclick = () => {
+        bookTrial(courseId);
+      };
+
+      // Show modal
+      courseModal.classList.add('active');
+      courseModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCourseModal() {
+      courseModal.classList.remove('active');
+      courseModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && courseModal.classList.contains('active')) {
+        closeCourseModal();
+      }
+    });
+
+    // Book Trial Interaction (Scroll and Auto-Select)
+    function bookTrial(courseId) {
+      closeCourseModal();
+
+      const programSelect = document.getElementById('program');
+      if (programSelect) {
+        programSelect.value = courseId;
+        // Trigger change event to clear errors if form validation is listening
+        const event = new Event('change');
+        programSelect.dispatchEvent(event);
+      }
+
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        const offset = 80;
+        const targetPosition = contactSection.offsetTop - offset;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+
+        // Highlight form with a subtle pulse/border animation
+        const formContainer = document.querySelector('.contact-form-container');
+        if (formContainer) {
+          formContainer.style.transition = 'all 0.3s ease';
+          formContainer.style.borderColor = 'var(--accent-gold)';
+          formContainer.style.boxShadow = '0 0 24px rgba(232, 184, 73, 0.4)';
+          setTimeout(() => {
+            formContainer.style.borderColor = 'var(--glass-border)';
+            formContainer.style.boxShadow = 'inset 0 1px 0 rgba(255, 255, 255, 0.03)';
+          }, 1500);
+        }
+      }
+    }
+
+    // Programs Slider Logic (3 cards on desktop, 2 on tablet, 1 on mobile)
+    (function initProgramsSlider() {
+      const track = document.getElementById('programsTrack');
+      const prevBtn = document.getElementById('programsPrevBtn');
+      const nextBtn = document.getElementById('programsNextBtn');
+      const dotsContainer = document.getElementById('programsDots');
+      if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+
+      const cards = track.querySelectorAll('.program-card');
+      const totalCards = cards.length;
+      let currentIndex = 0;
+
+      function getVisibleCards() {
+        if (window.innerWidth <= 768) return 1;
+        if (window.innerWidth <= 1024) return 2;
+        return 3;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, totalCards - getVisibleCards());
+      }
+
+      function renderDots() {
+        dotsContainer.innerHTML = '';
+        const maxIdx = getMaxIndex();
+        for (let i = 0; i <= maxIdx; i++) {
+          const dot = document.createElement('div');
+          dot.className = 'programs-dot' + (i === currentIndex ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+          dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateSlider();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateSlider() {
+        const visibleCards = getVisibleCards();
+        const maxIdx = getMaxIndex();
+        if (currentIndex > maxIdx) currentIndex = maxIdx;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const containerWidth = track.parentElement.getBoundingClientRect().width;
+        const gap = window.innerWidth <= 1024 ? 20 : 24;
+        const cardWidth = (containerWidth - (visibleCards - 1) * gap) / visibleCards;
+        const moveAmount = currentIndex * (cardWidth + gap);
+
+        track.style.transform = 'translateX(-' + moveAmount + 'px)';
+
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxIdx;
+
+        const dots = dotsContainer.querySelectorAll('.programs-dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+      }
+
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+        }
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex < getMaxIndex()) {
+          currentIndex++;
+          updateSlider();
+        }
+      });
+
+      // Touch Swipe Support
+      let startX = 0;
+      let isSwiping = false;
+
+      track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isSwiping = true;
+      }, { passive: true });
+
+      track.addEventListener('touchend', (e) => {
+        if (!isSwiping) return;
+        const endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0 && currentIndex < getMaxIndex()) {
+            currentIndex++;
+          } else if (diff < 0 && currentIndex > 0) {
+            currentIndex--;
+          }
+          updateSlider();
+        }
+        isSwiping = false;
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        renderDots();
+        updateSlider();
+      });
+
+      renderDots();
+      updateSlider();
+    })();
+
+  </script>
+
+</body>
+
+</html>
