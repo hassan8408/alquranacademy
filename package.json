@@ -1,4 +1,11 @@
 {
+  "name": "al-quranacademy",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "superstatic . --port 5000",
+    "start": "superstatic . --port 5000",
+    "serve": "superstatic . --port 5000"
+  },
   "dependencies": {
     "firebase": "^12.13.0",
     "firebase-tools": "^15.18.0"

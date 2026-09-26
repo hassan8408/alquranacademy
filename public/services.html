@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Quran Programs & Services | Al-Quran Academy</title>
+  <meta name="description"
+    content="Explore structured online Quran courses: Noorani Qaida, Quran Reading, Tajweed Mastery, Kids Quran Classes, and Memorization with certified tutors.">
+  <meta name="keywords"
+    content="Online Quran Classes, Noorani Qaida Online, Tajweed Course, Kids Quran, Learn Quran with Tajweed, Female Quran Tutor">
+  <meta property="og:title" content="Our Programs & Services | Al-Quran Academy">
+  <meta property="og:description"
+    content="Structured 1-on-1 Quran courses with certified male & female tutors. Start with 3 free trial classes today.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+
+
+  <!-- Scroll Progress Bar -->
+  <div id="progress-bar"></div>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/+923223838591" class="whatsapp-float" aria-label="Contact us on WhatsApp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Al-Quran Academy Home">
+        <i class="fas fa-mosque"></i>
+        <span>Al-Quran Academy</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li>
+          <a href="index.html">
+            <span>Home</span>
+            <i class="fas fa-chevron-right nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            <span>About</span>
+            <i class="fas fa-chevron-right nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="services.html" class="active">
+            <span>Programs</span>
+            <i class="fas fa-chevron-right nav-arrow"></i>
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            <span>Contact</span>
+            <i class="fas fa-chevron-right nav-arrow"></i>
+          </a>
+        </li>
+
+        <li class="mobile-nav-cta">
+          <a href="contact.html" class="btn btn-primary mobile-trial-btn">
+            <span>Book Free Trial Class</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <div class="mobile-nav-contacts">
+            <a href="https://wa.me/+923223838591" class="mobile-contact-pill whatsapp" target="_blank" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+            <a href="tel:+923223838591" class="mobile-contact-pill phone" aria-label="Call Academy">
+              <i class="fas fa-phone-alt"></i>
+              <span>Call Us</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="contact.html" class="btn btn-primary btn-nav-desktop">
+          <span>Start Free Trial</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <main id="main">
+    <!-- Page Hero Header -->
+    <section class="page-hero">
+      <div class="pattern-overlay"></div>
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Programs & Services</span>
+        </div>
+
+        <h1>Our Quran Programs & Courses</h1>
+        <p>Personalized 1-on-1 online courses taught by Ijazah-certified tutors. Tailored to your learning speed and
+          flexible schedule.</p>
+      </div>
+    </section>
+
+    <!-- Filterable Courses Section -->
+    <section>
+      <div class="container">
+        <div class="filter-bar">
+          <button class="filter-btn active" onclick="filterCourses('all')">All Programs</button>
+          <button class="filter-btn" onclick="filterCourses('beginner')">Beginners</button>
+          <button class="filter-btn" onclick="filterCourses('advanced')">Advanced Tajweed</button>
+          <button class="filter-btn" onclick="filterCourses('kids')">Kids & Family</button>
+        </div>
+
+        <div class="courses-catalog-grid" id="coursesCatalog">
+
+          <!-- Course 1: Noorani Qaida -->
+          <div class="program-card course-item" data-category="beginner">
+            <div class="program-image-container">
+              <img src="./assets/noorani-qaida.png" alt="Noorani Qaida Course Image" class="program-card-img">
+            </div>
+            <div class="program-card-body">
+              <div class="program-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h3>Noorani Qaida Foundation</h3>
+              <p>Master Arabic alphabets, correct articulation points (Makharij), and foundational Quranic reading with
+                patient 1-on-1 tutoring.</p>
+              <div class="program-card-meta">
+                <div class="program-card-meta-item">
+                  <i class="far fa-clock"></i>
+                  <span>Flexible</span>
+                </div>
+                <div class="program-card-meta-item">
+                  <i class="fas fa-signal"></i>
+                  <span>Beginner</span>
+                </div>
+              </div>
+              <div class="program-card-actions">
+                <button onclick="bookTrial('noorani')" class="btn-card btn-card-trial">Free Trial</button>
+                <button onclick="openCourseModal('noorani')" class="btn-card btn-card-details">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2: Quran Reading -->
+          <div class="program-card course-item" data-category="beginner">
+            <div class="program-image-container">
+              <img src="./assets/quran-reading.png" alt="Quran Reading Course Image" class="program-card-img">
+            </div>
+            <div class="program-card-body">
+              <div class="program-icon">
+                <i class="fas fa-book"></i>
+              </div>
+              <h3>Quran Reading (Nazra)</h3>
+              <p>Learn to recite the Holy Quran fluently and smoothly with correct pronunciation, basic rules, and
+                guided teacher feedback.</p>
+              <div class="program-card-meta">
+                <div class="program-card-meta-item">
+                  <i class="far fa-clock"></i>
+                  <span>3 - 6 Months</span>
+                </div>
+                <div class="program-card-meta-item">
+                  <i class="fas fa-signal"></i>
+                  <span>Intermediate</span>
+                </div>
+              </div>
+              <div class="program-card-actions">
+                <button onclick="bookTrial('reading')" class="btn-card btn-card-trial">Free Trial</button>
+                <button onclick="openCourseModal('reading')" class="btn-card btn-card-details">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3: Tajweed Mastery -->
+          <div class="program-card course-item" data-category="advanced">
+            <div class="program-image-container">
+              <img src="./assets/tajweed-mastery.png" alt="Tajweed Mastery Course Image" class="program-card-img">
+            </div>
+            <div class="program-card-body">
+              <div class="program-icon">
+                <i class="fas fa-pen-nib"></i>
+              </div>
+              <h3>Tajweed Mastery & Tarteel</h3>
+              <p>Perfect your recitation with advanced Tajweed rules (Noon/Meem Sakinah, Mudood), breath control, and
+                melodious recitation techniques.</p>
+              <div class="program-card-meta">
+                <div class="program-card-meta-item">
+                  <i class="far fa-clock"></i>
+                  <span>6 - 12 Months</span>
+                </div>
+                <div class="program-card-meta-item">
+                  <i class="fas fa-signal"></i>
+                  <span>All Levels</span>
+                </div>
+              </div>
+              <div class="program-card-actions">
+                <button onclick="bookTrial('tajweed')" class="btn-card btn-card-trial">Free Trial</button>
+                <button onclick="openCourseModal('tajweed')" class="btn-card btn-card-details">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4: Kids Quran Classes -->
+          <div class="program-card course-item" data-category="kids">
+            <div class="program-image-container">
+              <img src="./assets/kids-quran.png" alt="Kids Quran Classes Course Image" class="program-card-img">
+            </div>
+            <div class="program-card-body">
+              <div class="program-icon">
+                <i class="fas fa-child"></i>
+              </div>
+              <h3>Kids Quran Classes</h3>
+              <p>Fun, gamified, and engaging Quran classes specially designed for children (ages 4-15) with friendly and
+                encouraging tutors.</p>
+              <div class="program-card-meta">
+                <div class="program-card-meta-item">
+                  <i class="far fa-clock"></i>
+                  <span>Flexible</span>
+                </div>
+                <div class="program-card-meta-item">
+                  <i class="fas fa-signal"></i>
+                  <span>Kids (4-15)</span>
+                </div>
+              </div>
+              <div class="program-card-actions">
+                <button onclick="bookTrial('kids')" class="btn-card btn-card-trial">Free Trial</button>
+                <button onclick="openCourseModal('kids')" class="btn-card btn-card-details">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 5: Hifz Memorization -->
+          <div class="program-card course-item" data-category="advanced">
+            <div class="program-image-container">
+              <img src="./assets/hero-quran.jpg" alt="Quran Memorization Hifz Course" class="program-card-img">
+            </div>
+            <div class="program-card-body">
+              <div class="program-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3>Quran Memorization (Hifz)</h3>
+              <p>Systematic daily memorization with disciplined Sabaq, Sabqi, and Manzil revisions guided by experienced
+                Hafiz mentors.</p>
+              <div class="program-card-meta">
+                <div class="program-card-meta-item">
+                  <i class="far fa-clock"></i>
+                  <span>1 - 3 Years</span>
+                </div>
+                <div class="program-card-meta-item">
+                  <i class="fas fa-signal"></i>
+                  <span>Dedicated</span>
+                </div>
+              </div>
+              <div class="program-card-actions">
+                <button onclick="bookTrial('hifz')" class="btn-card btn-card-trial">Free Trial</button>
+                <button onclick="openCourseModal('hifz')" class="btn-card btn-card-details">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 6: Islamic Studies & Duas -->
+          <div class="program-card course-item" data-category="kids">
+            <div class="program-image-container">
+              <img src="./assets/about-academy.jpg" alt="Islamic Studies and Duas Course" class="program-card-img">
+            </div>
+            <div class="program-card-body">
+              <div class="program-icon">
+                <i class="fas fa-hands-praying"></i>
+              </div>
+              <h3>Islamic Studies & Daily Duas</h3>
+              <p>Learn the Pillars of Islam, practical step-by-step Salah, daily Sunnah Duas, inspiring Seerah stories,
+                and good manners.</p>
+              <div class="program-card-meta">
+                <div class="program-card-meta-item">
+                  <i class="far fa-clock"></i>
+                  <span>3 - 6 Months</span>
+                </div>
+                <div class="program-card-meta-item">
+                  <i class="fas fa-signal"></i>
+                  <span>All Ages</span>
+                </div>
+              </div>
+              <div class="program-card-actions">
+                <button onclick="bookTrial('islamic')" class="btn-card btn-card-trial">Free Trial</button>
+                <button onclick="openCourseModal('islamic')" class="btn-card btn-card-details">View Details</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section style="background: var(--glass-bg);">
+      <div class="container">
+        <div class="section-header">
+          <h2>How Online Learning Works</h2>
+          <p>A simple, seamless 4-step path to start Quran classes from anywhere in the world</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px; margin-top: 8px;">Book 3 Free Trials</h3>
+            <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
+              Fill out our brief registration form. No payment or credit card is required upfront.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px; margin-top: 8px;">Live Assessment</h3>
+            <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
+              Our scholar assesses your current recitation level and customizes the syllabus to your goals.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px; margin-top: 8px;">Select Your Schedule</h3>
+            <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
+              Pick your preferred days and time slots. 24/7 flexibility accommodates school and work.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px; margin-top: 8px;">Begin 1-on-1 Classes</h3>
+            <p style="color: var(--text-secondary); font-size: 0.925rem; line-height: 1.6;">
+              Join interactive Zoom/Skype classrooms with dedicated attention and weekly progress tracking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- High-Visibility CTA Section -->
+    <section class="cta-wrapper">
+      <div class="container cta-container">
+        <div class="cta-section">
+          <div class="pattern-overlay"></div>
+          <div class="cta-badge">
+            <i class="fas fa-gift"></i>
+            <span>100% Risk Free</span>
+          </div>
+          <h2>Start Your Free 3-Day Trial Today</h2>
+          <p>Experience our teaching excellence first-hand. Meet your dedicated tutor and select your personalized study
+            plan.</p>
+          <a href="contact.html" class="btn btn-primary"
+            style="font-size: 1.1rem; padding: 16px 36px; position: relative; z-index: 1;">
+            <span>Schedule My Free Classes</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Course Details Modal -->
+  <div id="courseModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeCourseModal()"></div>
+    <div class="modal-content-wrapper">
+      <div class="modal-card">
+        <button class="modal-close" onclick="closeCourseModal()" aria-label="Close modal">&times;</button>
+        <div class="modal-grid">
+          <div class="modal-sidebar">
+            <div class="modal-img-container">
+              <img id="modalImage" src="" alt="Course Image">
+            </div>
+            <div class="modal-sidebar-info">
+              <div class="modal-meta-item">
+                <i class="far fa-clock"></i>
+                <div>
+                  <h4>Duration</h4>
+                  <p id="modalDuration"></p>
+                </div>
+              </div>
+              <div class="modal-meta-item">
+                <i class="fas fa-signal"></i>
+                <div>
+                  <h4>Level</h4>
+                  <p id="modalLevel"></p>
+                </div>
+              </div>
+              <button id="modalBookBtn" class="btn btn-primary"
+                style="width: 100%; margin-top: var(--space-3); justify-content: center;">
+                <span>Book Free Trial</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <h2 id="modalTitle"></h2>
+            <p id="modalSubtitle" class="modal-subtitle"></p>
+
+            <div class="modal-section">
+              <h3>What you'll learn</h3>
+              <ul id="modalLearnList" class="modal-learn-list"></ul>
+            </div>
+
+            <div class="modal-section" style="margin-bottom: 0;">
+              <h3>Course Features</h3>
+              <div id="modalFeatures" class="modal-features-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: var(--space-2);">
+            <i class="fas fa-mosque"></i>
+            <span>Al-Quran Academy</span>
+          </div>
+          <p>Empowering Muslims worldwide to learn Quran with authentic teaching methods, certified tutors, and flexible
+            timings since 2015.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/+923223838591" target="_blank" aria-label="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Programs</a></li>
+
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Courses</h3>
+          <ul class="footer-links">
+            <li><a href="services.html">Noorani Qaida</a></li>
+            <li><a href="services.html">Quran Reading</a></li>
+            <li><a href="services.html">Tajweed Mastery</a></li>
+            <li><a href="services.html">Kids Quran Classes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Subscribe to receive Islamic reflections, Duas, and academy updates.</p>
+          <form class="newsletter-form" id="newsletterForm"
+            onsubmit="event.preventDefault(); alert('JazakAllah Khair! You have been subscribed.');">
+            <input type="email" placeholder="Your email address" required aria-label="Email address">
+            <button type="submit" class="btn btn-primary" style="padding: 12px 18px;" aria-label="Subscribe">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Al-Quran Academy. All rights reserved. | Built with Sincerity & Excellence.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Course Data
+    const courseDetails = {
+      noorani: {
+        title: "Noorani Qaida Foundation",
+        subtitle: "Foundational Arabic & Quranic Reading",
+        image: "./assets/noorani-qaida.png",
+        duration: "Flexible Duration",
+        level: "Beginner",
+        learn: [
+          "Pronounce Arabic letters correctly from origin (Makharij)",
+          "Master Harakat (short vowels) and Huroof-e-Maddah",
+          "Identify compound letters and word connections",
+          "Learn rules of Tanween, Sakoon, Tashdeed and Qalqalah",
+          "Read introductory Quranic words with ease"
+        ],
+        features: ["1-on-1 Interactive Classes", "Certified Tutor", "Progress Reports", "Flexible 24/7 Times"]
+      },
+      reading: {
+        title: "Quran Reading (Nazra)",
+        subtitle: "Fluent Recitation of the Holy Quran",
+        image: "./assets/quran-reading.png",
+        duration: "3 - 6 Months",
+        level: "Intermediate",
+        learn: [
+          "Recite the Holy Quran fluently and smoothly",
+          "Apply basic Tajweed rules practically during recitation",
+          "Correct common hidden mistakes and pronunciation lapses",
+          "Memorize essential daily Duas and short Surahs",
+          "Learn proper etiquette and manners of Quran recitation"
+        ],
+        features: ["Certified Quran Qaris", "Individual Attention", "Weekly Feedback", "Female Tutors Available"]
+      },
+      tajweed: {
+        title: "Tajweed Mastery & Tarteel",
+        subtitle: "Advanced Recitation & Articulation Rules",
+        image: "./assets/tajweed-mastery.png",
+        duration: "6 - 12 Months",
+        level: "Advanced",
+        learn: [
+          "Master rules of Noon & Meem Sakinah, Ghunnah, and Ikhfa",
+          "Understand all types of Mudood (prolongations)",
+          "Master rules of Waqf and Ibtida (Stopping & Starting)",
+          "Recite with melodious rhythm and correct breath control",
+          "Prepare for formal Ijazah certification"
+        ],
+        features: ["Ijazah Certified Scholars", "Audio-Visual Corrections", "Melodic Coaching", "Detailed Feedback"]
+      },
+      kids: {
+        title: "Kids Quran Classes",
+        subtitle: "Engaging & Fun Quranic Education for Children",
+        image: "./assets/kids-quran.png",
+        duration: "Flexible Schedule",
+        level: "Kids (Ages 4-15)",
+        learn: [
+          "Learn Arabic letters through gamified and fun lessons",
+          "Read Quran with simple, kid-friendly interactive methods",
+          "Memorize Juz Amma (30th Juz) with joyful recitation",
+          "Learn basic Islamic beliefs, manners, and daily Duas",
+          "Develop a lifelong love and reverence for Allah's Word"
+        ],
+        features: ["Child-Friendly Tutors", "Digital Flashcards", "Fun Activities", "Parent-Teacher Updates"]
+      },
+      hifz: {
+        title: "Quran Memorization (Hifz)",
+        subtitle: "Complete or Partial Quran Memorization",
+        image: "./assets/hero-quran.jpg",
+        duration: "1 - 3 Years",
+        level: "Dedicated",
+        learn: [
+          "Systematic daily memorization techniques (Sabaq)",
+          "Rigorous revision of recently learned portions (Sabqi)",
+          "Long-term retention revision cycles (Manzil)",
+          "Apply perfect Tajweed rules while memorizing",
+          "Earn completion certificate and Sanad upon graduation"
+        ],
+        features: ["Dedicated Hafiz Mentors", "Daily Revision Plan", "Progress Tracker App", "Motivational Guidance"]
+      },
+      islamic: {
+        title: "Islamic Studies & Daily Duas",
+        subtitle: "Comprehensive Islamic Character & Practice",
+        image: "./assets/about-academy.jpg",
+        duration: "3 - 6 Months",
+        level: "All Ages",
+        learn: [
+          "Pillars of Islam and Articles of Faith (Iman)",
+          "Step-by-step practical performance of Wudu and Salah",
+          "Essential daily Sunnah Duas for waking, eating, sleeping",
+          "Inspiring stories from the life of the Prophet (PBUH)",
+          "Islamic etiquette, respect for parents, and good manners"
+        ],
+        features: ["Interactive Worksheets", "Bilingual Instructors", "Family Friendly", "Certificate Awarded"]
+      }
+    };
+
+    // Filter courses
+    function filterCourses(category) {
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const items = document.querySelectorAll('.course-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal handling
+    const courseModal = document.getElementById('courseModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalSubtitle = document.getElementById('modalSubtitle');
+    const modalDuration = document.getElementById('modalDuration');
+    const modalLevel = document.getElementById('modalLevel');
+    const modalLearnList = document.getElementById('modalLearnList');
+    const modalFeatures = document.getElementById('modalFeatures');
+    const modalBookBtn = document.getElementById('modalBookBtn');
+
+
+    function bookTrial(courseId) {
+      window.location.href = 'contact.html?course=' + courseId;
+    }
+
+    function openCourseModal(courseId) {
+      const course = courseDetails[courseId];
+      if (!course) return;
+
+      modalImage.src = course.image;
+      modalImage.alt = course.title;
+      modalTitle.textContent = course.title;
+      modalSubtitle.textContent = course.subtitle;
+      modalDuration.textContent = course.duration;
+      modalLevel.textContent = course.level;
+
+      modalLearnList.innerHTML = '';
+      course.learn.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        modalLearnList.appendChild(li);
+      });
+
+      modalFeatures.innerHTML = '';
+      course.features.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'modal-feature-tag';
+        span.textContent = tag;
+        modalFeatures.appendChild(span);
+      });
+
+      modalBookBtn.onclick = () => {
+        window.location.href = 'contact.html?course=' + courseId;
+      };
+
+      courseModal.classList.add('active');
+      courseModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCourseModal() {
+      courseModal.classList.remove('active');
+      courseModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && courseModal.classList.contains('active')) {
+        closeCourseModal();
+      }
+    });
+
+    // Preloader
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.classList.add('hidden');
+        setTimeout(() => preloader.style.display = 'none', 500);
+      }
+    });
+
+    // Scroll Progress
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const pb = document.getElementById('progress-bar');
+      if (pb) pb.style.width = scrolled + '%';
+
+      const navbar = document.querySelector('.navbar');
+      if (navbar) {
+        if (window.pageYOffset > 50) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const themeIcon = themeToggle.querySelector('i');
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    themeToggle.addEventListener('click', () => {
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeIcon.className = next === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+
+    // Mobile Navigation & Drawer Logic
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    const navBackdrop = document.getElementById('navBackdrop');
+
+    function toggleMenu(forceClose = false) {
+      const isCurrentlyOpen = navMenu.classList.contains('active');
+      const shouldOpen = forceClose ? false : !isCurrentlyOpen;
+
+      if (shouldOpen) {
+        navMenu.classList.add('active');
+        navBackdrop.classList.add('active');
+        hamburger.classList.add('active');
+        hamburger.setAttribute('aria-expanded', 'true');
+        hamburger.querySelector('i').className = 'fas fa-times';
+        document.body.style.overflow = 'hidden';
+      } else {
+        navMenu.classList.remove('active');
+        navBackdrop.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.querySelector('i').className = 'fas fa-bars';
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (hamburger && navMenu && navBackdrop) {
+      hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+      });
+      navBackdrop.addEventListener('click', () => toggleMenu(true));
+
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 860) {
+            toggleMenu(true);
+          }
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+          toggleMenu(true);
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 860 && navMenu.classList.contains('active')) {
+          toggleMenu(true);
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
